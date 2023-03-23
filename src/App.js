@@ -6,6 +6,7 @@ import Services from './routes/Services';
 import Contact from './routes/Contact';
 import Login from './routes/Login';
 import Register from './routes/Register';
+import Forgotpw from './routes/Forgotpw';
 
 
 
@@ -20,6 +21,7 @@ const App=()=>{
         <Route path ="/contact" element={<Contact/>}/>
         <Route path ="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/forgotpw" element={<Forgotpw/>}/>
       </Routes>
        
     </div>

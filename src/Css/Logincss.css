@@ -4,10 +4,21 @@
     height: 100%;
     position: fixed;
 }
+.headd{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 15px;
+    width: 100%;
+    height:80px;
+    position: fixed;
+    z-index: 9999;
+}
 .top{
     display:flex;
     align-items: right;
     justify-content: right;
+    margin-top: 10px;
     padding: 10px 10px;
     gap:60px;
     margin-right: -10px;
@@ -20,7 +31,28 @@ a{
     font-family: "Poppins", sans-serif;
 }
 #button1{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: -4px;
+}
+
+#welcome{
+    position: absolute;
+    width: 200px;
+    height: 64px;
+    left: 38.3%;
+    right: 50%;
+    top: 130px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+
+    font-family:"Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 img{
     width: 100%;
@@ -35,21 +67,68 @@ img{
     display: grid;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
-    padding:30px;
+    margin-top: 230px;
+    padding:20px;
+    
 }
+
+#email{
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: center;
+margin-bottom: 10px;
+
+
+}
+#password{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
 input {
     padding: 8px;
     box-shadow: 3px 3px 5px rgb(175, 233, 178);
     font-size: 14px;
     font-weight: 600;
-    width: 300px;
-    border-radius: 18px;
-    border-color: #05B00C;
+    width: 390px;
+    height: 50px;
+    border-radius: 13px;
+    background:  #FFFFFF;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: 1px solid #05B00C;
   }
+.forpw a{
+    text-decoration: none;
+    color: none;
+
+}
+#reset{
+    color: black;
+}
  #button2{
-    margin-top: 10px;
-    margin-left: 50px;
+    width: 150px;
+    height: 42px;
+    margin-top: 25px;
+    margin-left: 70px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+ }
+
+ #reset:hover{
+    color:#05B00C;
  }
