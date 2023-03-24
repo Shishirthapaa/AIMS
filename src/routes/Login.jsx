@@ -38,7 +38,8 @@ const Login=()=>{
                         <label id="email" htmlFor="email">Email</label>
                         <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email"/>
                         <label id="password" htmlFor="password">Password</label>
-                        <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="**********" id="password" name="password"/> 
+                        <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="**********" id="password" name="password"/>
+                        <button id="button2" type='submit'>Log in</button> 
                     </form>
                     <div className='forpw'>
                     <a>Forgot Password? </a>
@@ -46,7 +47,7 @@ const Login=()=>{
                             <a id="reset" >Reset</a>
                         </Link>
                     </div>
-                    <button id="button2" type='submit'>Log in</button>
+                    
         </div>
 
          <div className='back'>
