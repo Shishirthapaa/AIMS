@@ -1,39 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Component/Navbar';
+import"../Css/Datacss.css";
+import Loginimg from '../Images/Loginimg.png';
 
-const  Data=()=>{
-    const [datas, setData] = useState([])
-
-  const fetchData = () => {
-    fetch("http://localhost:8000/crops-data/")
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        setData(data)
-      })
-  }
+function  FetchData() {
+    const [info, setData] = useState([])
 
   useEffect(() => {
-    fetchData()
+    fetch("http://localhost:8000/crops-data/")
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(err => console.log(err))
   }, [])
     return(
         <>
         <Navbar/>
 
-        <div className="App">
-        <header className="App-header">
-        <h2>Crop Data</h2>
-        </header>
-        <div className="user-container">
-        <h5 className="info-item">{datas.name}</h5>
-        <h5 className="info-item">{datas.region}</h5>
-        <h5 className="info-item">{datas.climate}</h5>
-        <h5 className="info-item">{datas.rainfall}</h5>
-        </div>
+        
+
+        <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Rating</th>
+        </tr>
+
+          {info.map((item, index)=>(
+             <tr key={index}>
+             <td>{item.region}</td>
+             <td>{item.climate}</td>
+             <td>{item.price}</td>
+             <td>{item.rating}</td>
+           </tr>
+          ))}
+
+
+        </tbody>
+        
+        <div className="backgrd">
+        <img alt="loginimg" src={Loginimg}/>
         </div>
 
         </>
     )
 }
-export default Data;
+export default FetchData;
